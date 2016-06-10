@@ -1,0 +1,31 @@
+html{
+    background-color: antiquewhite;
+}
+@font-face{
+    font-family: codebold;
+    src: url("fonts/CODE Bold.otf");
+}
+@font-face{
+    font-family: typo;
+    src: url("fonts/TypoGraphica.otf");
+}
+.MainContent header{
+    font-family: codebold;
+    font-size: 60px;
+    text-align: center;
+}
+.MainContent h1{
+    font-family: typo;
+    font-size: 30px;
+    letter-spacing: 1px;
+}
+.MainContent p{
+    font-family: 'Open Sans',sans-serif;
+    font-size: 20px;
+}
+a{
+    text-decoration: none;
+    text-align: center;
+    font-family: 'Open Sans',sans-serif;
+    font-size: 20px;
+}

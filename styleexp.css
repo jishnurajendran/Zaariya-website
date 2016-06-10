@@ -1,0 +1,116 @@
+html{
+    background-color: antiquewhite;
+}
+a{
+    text-decoration: none;
+}
+@font-face{
+    font-family: confo;
+    src:url("fonts/Conformity.ttf");
+}
+@font-face{
+    font-family:codebold;
+    src:url('fonts/CODE Bold.otf');
+}
+@font-face{
+    font-family: typo;
+    src: url("fonts/TypoGraphica.otf");
+}
+@font-face{
+    font-family: atp;
+    src: url("fonts/atp.ttf");
+}
+@font-face{
+    font-family: ccr;
+    src: url("fonts/ccrb.ttf");
+}
+@font-face{
+    font-family:yunus;
+    src:url('fonts/YunusH.otf');
+}
+@font-face{
+    font-family:yummy;
+    src:url('fonts/YummyCupcakes.ttf');
+}
+.fixed{
+    position:fixed;
+    top:0;
+    width:100%;
+}
+.nav-placeholder{
+}
+.MainContent header{
+    font-family: atp;
+    font-size: 60px;
+    letter-spacing: 1px;
+    text-align: center;
+    background-color: coral;
+    color:midnightblue;
+    margin-bottom:15px;
+}
+.MainContent h1{
+    font-family: ccr;
+    font-size:50px;
+    letter-spacing: 1px;
+    background-color:brown;
+    color:cornsilk;
+}
+.MainContent p,.MainContent ol li{
+    font-family: yummy;
+    font-weight: 600;
+    font-size: 30px;
+   
+}
+.MainContent.experiences{
+    background-color: aqua;
+    border: 1px solid black;
+    height:auto;
+    width: auto;
+}
+.MainContent nav{
+    text-align: center;     
+    /*margin-top: 15px;*/
+}
+.MainContent nav ul{
+     background-color:rgba(69,69,69,0.5);          /*Background color of navigation menu*/
+    /*height: 40px;*/
+    border-radius: 5px;
+    margin: 0 auto;
+    min-height: 10px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    list-style: none;
+    display: inline-block;
+    padding-left: 0;
+    width: auto;                /*Make navigation bar responsive*/
+}
+.MainContent nav ul li{
+      float:left;
+    display: inline;
+}
+.MainContent a:link,.MainContent a:visited{
+    color:white;                       /*Change text color of link in navigation*/
+    display: inline-block;
+    padding: 10px 25px;
+    height: 20px;
+    font-family: 'Open Sans';
+    opacity: 0.8;
+    transition: 0.5s ease;
+}
+.MainContent a:hover,.MainContent a:active, .MainContent nav .active a:link,.MainContent nav .active a:visited{
+      background-color: orangered;       /*Background color of link in navigation when hovered over*/
+    opacity: 1.0;
+    transition: 0.7s ease;
+}
+.MainContent nav a{
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+.MainContent footer{
+    text-align: center;
+}
+.MainContent footer a{
+    background-color: dimgray;
+    text-align: center;
+}

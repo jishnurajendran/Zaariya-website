@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            #background1{
+                background-color: rgb(0,0,0);
+                position: fixed;
+                top: 0px;
+                left: 0px;
+                width: 100%;
+                height: 600px;
+                z-index: 1000;
+            }
+            #image1{
+                position:absolute;
+                top: 0px;
+                left: 0px;
+            }
+            #text1{
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 60px;
+                color: rgb(150,150,150); 
+                position: absolute;
+                top: 200px;
+                left: 500px;
+            }
+            
+            #background2{
+                background-color: rgb(150,150,150);
+                position: fixed;
+                top: 0px;
+                left: 0px;
+                width: 100%;
+                height: 600px;
+                z-index: 1001;
+            }
+            #image2{
+                position:absolute;
+                top: 0px;
+                left: 0px;
+            }
+            #text2{
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 60px;
+                color: rgb(0,0,0); 
+                position: absolute;
+                top: 200px;
+                left: 500px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="background1">
+            <img src="images/image1.png" id="image1">
+            <div id="text1">bLAH</div>
+        </div>
+        
+        <div id="background2">
+            <img src="images/image2.png" id="image2">
+            <div id="text2">bLAH</div>
+        </div>
+        <script type="text/javascript">
+            window.addEventListener('DOMMouseScroll',pageScroll, false);
+            if('onmousewheel' in document){document.onmousewheel=pageScroll;}
+            function pageScroll(e){
+                var event;
+                if(!e){
+                    event=window.event;
+                }
+                else{
+                    event=e;
+                };
+                
+                var delta;
+                if(event.wheelDelta){
+                    delta=event.wheelDelta;
+                }
+                else if(event.detail){
+                    delta=(event.detail*-1);
+                }
+                
+                var move=0;
+                if(delta>0){
+                    move=20;
+                }
+                if(delta<0){
+                    move=-20;
+                }
+                //alert(move);
+                var background1=document.getElementById('background1');
+                var background2=document.getElementById('background2');
+                
+                var background1_top=background1.offsetTop+move;
+                //var background2_top=background2.offsetTop+move;
+                //alert(background2_top);
+                background1.style.top=(background1_top)+'px';
+                background2.style.top=(background1_top+600)+'px';
+                
+                var image1=document.getElementById('image1');
+                var image1_top=image1.offsetTop+move;
+                image1.style.top=(image1_top)+'px';
+                var image2=document.getElementById('image2');
+                //var image2_top=image1.offsetTop+move;
+                image2.style.top=(image1_top+600)+'px';
+            }
+        </script>
+    </body>
+</html>
