@@ -4,6 +4,9 @@ html{
 a{
     text-decoration: none;
 }
+
+font-family: 'PT Sans', sans-serif;
+
 @font-face{
     font-family: confo;
     src:url("fonts/Conformity.ttf");
